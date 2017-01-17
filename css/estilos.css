@@ -1,0 +1,123 @@
+body {
+	background: #444;
+	margin: 0;
+	font-family:monospace; 
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+}
+
+.galeria {
+	width: 90%;
+	margin: auto; /*Lo centra automaticamente*/
+	list-style: none;
+	padding: 20px;
+	box-sizing:border-box; /*Para que no crezca mas el ancho de la galeria*/
+
+	display: flex; /*Pone las imagenes en una sola columna AUTOMATICAMENTE*/
+	flex-wrap:wrap; /*Los elementos que no caben, bajan a una segunda columna*/
+	justify-content: space-around; /*Para que haya un espacio alrededor de la imagen*/
+}	
+
+.galeria li {
+	margin: 5px;
+}
+
+.galeria img {
+	width: 150px;
+	height: 100px;
+}
+
+/*Estilos del modal*/
+
+.modal{
+	position: fixed;
+	background: rgba(0,0,0,.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+}
+
+.modal { 
+	/*display: none; Hace que no se muestre la imagen grande
+	hasta que le des click a una imagen*/
+	visibility: hidden;
+	opacity: 0;
+}
+
+.modal:target {/*funciona cuando se de click en una imagen*/
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s;
+	/*display: block;*/
+	position: fixed;
+	background: rgba(0,0,0,.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;	
+}
+
+.modal h3 {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.imagen {
+	width: 100%;
+	height: 80%;
+
+	display: flex;
+	justify-content:center;/*Centra la foto de tamaño horizontal*/
+	align-items:center;/*Centra las flechitas*/
+
+}
+
+.imagen a{/*Son las flexhitas*/
+	color: #fff;
+	font-size: 40px;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.imagen a:nth-child(2) { /*Contiene la imagen*/
+	margin: 0;
+	height: 100%;
+	flex-shrink:2;/*Es una propiedad de redución, siempre va a encajar
+	con los dos items que tiene al costado, siempre encajara en ese ancho*/
+}
+
+.imagen img {
+	width: 500px;
+	height: 100%;
+	max-width: 100%;
+	border: 7px solid #fff;
+	box-sizing: border-box;
+}
+
+.cerrar {
+	display: block;/*Lo vuelve bloque y así lo puedes mover mas facilemte*/
+	background: #fff;
+	width: 25px;
+	height: 25px;
+	margin: 10px auto;/*Lo centra en automatico el auto, los 10px son hacia abajo*/
+	text-align: center; /*Alinea al centro pero, dentro de la caja*/
+	text-decoration: none;
+	font-size: 25px;
+	color: #000;
+	padding: 5px;
+	border-radius: 50%;
+	line-height: 25px;
+
+}
+
+
+psuedo clase  , empieza a funcionar cuando yo hago click
+en un vínculo
+
+
